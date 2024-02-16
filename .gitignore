@@ -1,0 +1,7 @@
+venv
+.env
+logs
+.vsvode
+__pycache__
+.idea
+.flake8
