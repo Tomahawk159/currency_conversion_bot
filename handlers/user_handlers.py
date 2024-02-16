@@ -80,6 +80,9 @@ async def process_convert(message: Message, state: FSMContext):
         await message.answer(text=f'Составляет: {response_user} {to_currency}')
         await state.clear()
         logger.info('Конвертация выполнена успешно')
+    else:
+        await message.answer(text='Неверный ввод, проверьте формат ввода')
+        logger.warning('Неверный формат ввода')
 
 
 @router.message()
